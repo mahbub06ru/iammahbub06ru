@@ -1,0 +1,8 @@
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Claude Code local settings (keep launch.json, ignore local machine settings)
+.claude/settings.local.json
