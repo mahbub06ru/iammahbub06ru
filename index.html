@@ -36,7 +36,7 @@
     "https://linkedin.com/in/mahbub06ru",
     "https://github.com/mahbub06ru"
   ],
-  "knowsAbout": ["Flutter", "Dart", "Native Android", "Kotlin", "Jetpack Compose", "NestJS", "Node.js", "PostgreSQL", "FinTech", "Mobile Security", "CI/CD"]
+  "knowsAbout": ["Flutter", "Dart", "Native Android", "Kotlin", "Jetpack Compose", "Native iOS", "Swift", "SwiftUI", "React Native", "Expo", "NestJS", "Node.js", "PostgreSQL", "FinTech", "Mobile Security", "CI/CD"]
 }
 </script>
 </head>
@@ -100,9 +100,9 @@
             <div class="mini-bars"><i style="--h:52%"></i><i style="--h:78%"></i><i style="--h:64%"></i><i style="--h:90%"></i><i style="--h:70%"></i></div>
           </div>
           <div class="screen-slide s2">
-            <span class="chip chip-backend">Full-stack · Sync</span>
+            <span class="chip chip-backend">Full-stack · 4 clients</span>
             <h3>FinTrack platform</h3>
-            <p>Offline-first Flutter client · NestJS + Postgres API · CI/CD</p>
+            <p>Flutter · iOS · Android · React Native — one NestJS + Postgres API</p>
             <div class="mini-bars"><i style="--h:44%"></i><i style="--h:70%"></i><i style="--h:58%"></i><i style="--h:86%"></i><i style="--h:76%"></i></div>
           </div>
           <div class="screen-slide s3">
@@ -154,6 +154,32 @@
       </dl>
     </article>
 
+    <article class="skill-card">
+      <header>
+        <h3>Native iOS <span class="years">shipped client</span></h3>
+      </header>
+      <dl>
+        <div><dt>Languages</dt><dd>Swift · SwiftUI</dd></div>
+        <div><dt>Architecture</dt><dd>Clean MVVM · @Observable · SwiftData</dd></div>
+        <div><dt>Tooling</dt><dd>XcodeGen (reproducible project generation) · Xcode Simulator/device testing</dd></div>
+        <div><dt>Integration</dt><dd>REST clients against a live NestJS backend · Google Sign-In (OAuth) · Keychain-backed secure storage</dd></div>
+        <div><dt>Localization</dt><dd>Full EN/BN via native `.lproj` bundles</dd></div>
+      </dl>
+    </article>
+
+    <article class="skill-card">
+      <header>
+        <h3>React Native <span class="years">shipped client</span></h3>
+      </header>
+      <dl>
+        <div><dt>Framework</dt><dd>Expo · React Navigation</dd></div>
+        <div><dt>State &amp; storage</dt><dd>Zustand · MMKV (encrypted, offline-first)</dd></div>
+        <div><dt>Integration</dt><dd>Google Sign-In · direct Google Drive REST v3 · shared backend REST API</dd></div>
+        <div><dt>Native tooling</dt><dd>Expo prebuild · Gradle/Android Studio interop · native module debugging</dd></div>
+        <div><dt>UI</dt><dd>react-native-svg charts · react-i18next EN/BN localization</dd></div>
+      </dl>
+    </article>
+
     <article class="skill-card skill-card-wide">
       <header>
         <h3>Backend &amp; full-stack <span class="years years-alt">live in prod</span></h3>
@@ -202,9 +228,10 @@
         <h3>Full-Stack Engineer — FinTrack <span class="tl-tag">self-directed platform</span></h3>
         <p class="tl-company">Personal engineering case study · Flutter + NestJS + PostgreSQL</p>
         <ul>
-          <li>Evolved a shipped Flutter expense tracker into a full-stack, sync-driven product — sole owner of client, REST API, database, CI/CD and deployment.</li>
-          <li>Built an <strong>offline-first sync engine</strong>: outbox queue, per-record delta sync, exponential-backoff retry and version-gated conflict resolution, with a pluggable remote target.</li>
+          <li>Evolved a shipped Flutter expense tracker into a full-stack, <strong>multi-client sync-driven platform</strong> — sole owner of every client, the REST API, database, CI/CD and deployment.</li>
+          <li>Built an <strong>offline-first sync engine</strong>: outbox queue, per-record delta sync, exponential-backoff retry and version-gated conflict resolution, with a pluggable remote target — implemented independently across all four clients.</li>
           <li>Shipped a <strong>NestJS + Prisma API on PostgreSQL</strong> (Neon) with JWT and rotating refresh tokens; deployed on Render and live-verified end to end against production.</li>
+          <li>Ported the same architecture to <strong>native iOS (Swift/SwiftUI)</strong>, <strong>native Android (Kotlin/Jetpack Compose)</strong> and <strong>React Native (Expo)</strong> — each a real, buildable project with Google Sign-In verified live against production, not source scaffolds.</li>
           <li>Added FCM push alerts (budget / low-balance / monthly income), AES-256 encryption at rest, full EN/BN localization and a responsive UI.</li>
           <li>Hardened for production: GitHub Actions CI (analyze / test / lint + e2e on ephemeral Postgres), rate limiting, security headers and Dependabot.</li>
         </ul>
@@ -284,25 +311,29 @@
 <section id="casestudy" class="section reveal">
   <div class="section-head">
     <span class="chip chip-featured">Featured case study · Full-stack ownership</span>
-    <h2>FinTrack — an offline-first personal finance platform</h2>
-    <p>Where I took a shipped Flutter app and rebuilt it as a full-stack, sync-driven product: Flutter client, NestJS + PostgreSQL backend, push notifications, CI/CD — deployed and live-verified end to end against real infrastructure.</p>
+    <h2>FinTrack — an offline-first personal finance platform, four clients deep</h2>
+    <p>Where I took a shipped Flutter app and rebuilt it as a full-stack, sync-driven product — then proved the architecture translates by shipping the <strong>same platform on native iOS, native Android and React Native</strong>, all against one NestJS + PostgreSQL backend, deployed and live-verified end to end against real infrastructure.</p>
   </div>
 
   <div class="cs-grid">
     <div class="cs-main">
       <ul class="cs-points">
-        <li><strong>Offline-first sync engine.</strong> Outbox queue, per-record delta sync, retry with exponential backoff, and explicit version-gated conflict resolution.</li>
+        <li><strong>One backend, four independent clients.</strong> Flutter (production), native iOS (Swift/SwiftUI), native Android (Kotlin/Jetpack Compose) and React Native (Expo) each implement the same offline-first sync architecture from scratch in their own idiomatic stack — not a shared codebase.</li>
+        <li><strong>Offline-first sync engine.</strong> Outbox queue, per-record delta sync, retry with exponential backoff, and explicit version-gated conflict resolution — reimplemented per platform (Hive/GetX, SwiftData, Room/Hilt, MMKV/Zustand).</li>
         <li><strong>Real backend, real database.</strong> NestJS + Prisma against PostgreSQL (Neon), JWT auth with rotating refresh tokens, deployed on Render and verified against production — not mocked in tests.</li>
         <li><strong>Dual-write architecture.</strong> One Google sign-in writes to Postgres (primary) and Google Drive (permanent backup); the sync engine's remote target is pluggable, so this needed no change to the outbox/worker.</li>
         <li><strong>Push notifications that matter.</strong> Budget-exceeded, low-balance and monthly-income alerts via FCM, verified on a real device against real backend data.</li>
-        <li><strong>Encryption at rest.</strong> AES-256 local cache, Keystore/Keychain-backed credentials, migration tested against real pre-existing device data.</li>
-        <li><strong>Full English / Bangla localization.</strong> Every screen including the native date picker, with zero-restart language switching.</li>
+        <li><strong>Encryption at rest.</strong> AES-256 / MMKV encryption / SwiftData secure storage depending on platform, Keystore/Keychain-backed credentials, migration tested against real pre-existing device data.</li>
+        <li><strong>Full English / Bangla localization.</strong> Every screen on every client, with zero-restart language switching.</li>
         <li><strong>CI/CD + hardening.</strong> GitHub Actions runs analyze / test / lint plus an e2e suite on an ephemeral Postgres; rate limiting, security headers and Dependabot live in production.</li>
       </ul>
       <div class="cs-links hero-actions">
         <a class="btn btn-primary" href="https://mahbub06ru4.github.io/flutter_expin/" target="_blank" rel="noopener">Live web demo</a>
         <a class="btn btn-ghost" href="https://fintrack-api-ltwp.onrender.com/docs" target="_blank" rel="noopener">Backend API (Swagger)</a>
         <a class="btn btn-ghost" href="https://github.com/mahbub06ru4/flutter_expin" target="_blank" rel="noopener">Source, roadmap &amp; ADRs</a>
+        <a class="btn btn-ghost" href="https://github.com/mahbub06ru4/flutter_expin/tree/main/ios/FinTrackiOS" target="_blank" rel="noopener">Native iOS client ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/mahbub06ru4/flutter_expin/tree/main/android/FinTrackAndroid" target="_blank" rel="noopener">Native Android client ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/mahbub06ru4/flutter_expin/tree/main/reactnative" target="_blank" rel="noopener">React Native client ↗</a>
       </div>
     </div>
 
@@ -310,14 +341,17 @@
       <h3>Stack</h3>
       <div class="cs-stack">
         <span>Flutter</span><span>Dart</span><span>GetX</span><span>Hive</span>
+        <span>Swift</span><span>SwiftUI</span><span>SwiftData</span>
+        <span>Kotlin</span><span>Jetpack Compose</span><span>Hilt</span><span>Room</span>
+        <span>React Native</span><span>Expo</span><span>Zustand</span><span>MMKV</span>
         <span>Node.js</span><span>NestJS</span><span>Prisma</span><span>PostgreSQL</span>
         <span>JWT</span><span>Firebase FCM</span><span>Render</span><span>Neon</span>
         <span>GitHub Actions</span><span>Docker</span>
       </div>
       <h3>Architecture</h3>
-      <p>Clean architecture on mobile — domain / data / presentation layers. Modular NestJS on the backend. One reactive source of truth per concern; every non-obvious decision recorded as an ADR.</p>
+      <p>Clean architecture on every mobile client — domain / data / presentation layers, each in its platform's idiomatic style. Modular NestJS on the backend. One reactive source of truth per concern; every non-obvious decision recorded as an ADR.</p>
       <h3>My role</h3>
-      <p>Sole engineer — product, client, backend, database, DevOps and release.</p>
+      <p>Sole engineer across all four clients — product, client, backend, database, DevOps and release.</p>
     </aside>
   </div>
 </section>
@@ -337,10 +371,10 @@
       <p class="app-role">Role: architecture, security layer, 40+ features</p>
     </article>
     <article class="app-card">
-      <span class="chip chip-backend">FinTech · Full-stack</span>
+      <span class="chip chip-backend">FinTech · Full-stack · 4 clients</span>
       <h3>FinTrack — finance platform</h3>
-      <p>Offline-first Flutter client backed by a live NestJS + PostgreSQL API: real sync engine, dual-write backup to Google Drive, FCM push alerts, EN/BN localization and AES-256 encryption at rest. Shipped with full CI/CD.</p>
-      <p class="app-role">Role: sole full-stack engineer — client, backend, DB, DevOps</p>
+      <p>Offline-first personal finance platform shipped on <strong>four independent clients</strong> — Flutter, native iOS (Swift/SwiftUI), native Android (Kotlin/Compose) and React Native (Expo) — all backed by one live NestJS + PostgreSQL API: real sync engine, dual-write backup to Google Drive, FCM push alerts, EN/BN localization and encryption at rest. Shipped with full CI/CD.</p>
+      <p class="app-role">Role: sole full-stack engineer — every client, backend, DB, DevOps</p>
     </article>
     <article class="app-card">
       <span class="chip chip-fintech">FinTech · Merchant</span>
