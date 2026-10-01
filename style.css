@@ -327,6 +327,29 @@ strong { font-weight: 600; }
 .app-card p { font-size: 0.92rem; color: var(--ink-soft); }
 .app-role { font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent); margin-top: auto; }
 
+/* ---------------- OPEN SOURCE ---------------- */
+.oss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.oss-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px;
+  display: flex; flex-direction: column; gap: 14px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.oss-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: #c9d7e8; }
+.oss-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.oss-head h3 { font-size: 1.12rem; font-family: var(--font-mono); letter-spacing: -0.01em; }
+.oss-version {
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 500;
+  color: var(--accent-2); background: var(--accent-2-soft);
+  padding: 3px 10px; border-radius: 999px; white-space: nowrap;
+}
+.oss-card p { font-size: 0.92rem; color: var(--ink-soft); }
+.oss-card code {
+  font-family: var(--font-mono); font-size: 0.86em;
+  background: var(--surface-alt); padding: 1px 6px; border-radius: 5px;
+}
+.oss-card .btn { align-self: flex-start; margin-top: auto; }
+
 /* ---------------- EDUCATION ---------------- */
 .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .edu-card {
@@ -358,7 +381,7 @@ strong { font-weight: 600; }
   .hero-inner { grid-template-columns: 1fr; padding-top: 52px; }
   .hero-device { order: -1; }
   .phone { width: 220px; height: 448px; }
-  .skills-grid, .apps-grid, .edu-grid { grid-template-columns: 1fr; }
+  .skills-grid, .apps-grid, .edu-grid, .oss-grid { grid-template-columns: 1fr; }
   .dl-2col { grid-template-columns: 1fr; }
   .dl-2col div:nth-child(2) { border-top: 1px dashed var(--border); }
   .specialty-row { grid-template-columns: 1fr; }

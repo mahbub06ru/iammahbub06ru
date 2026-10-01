@@ -25,6 +25,7 @@ Personal portfolio website showcasing 12+ years of mobile app development experi
 - **Full-stack:** designs, builds and deploys REST APIs on **NestJS + PostgreSQL (Prisma)** with GitHub Actions CI/CD
 - End-to-end app lifecycle: architecture, development, backend, CI/CD, deployment, and monitoring
 - FinTech & payment systems (bKash, Nagad, Stripe, SSLCommerz, QR/EMV payments, virtual cards)
+- **2 published open-source Flutter packages** on pub.dev — `quick_container` & `quick_list_builder`
 - Worked with international companies in USA, China, Hong Kong, Japan
 
 ---
@@ -65,6 +66,15 @@ An **offline-first personal finance platform**: a Flutter client with a real syn
 - **HydroHome by BC Hydro** (Canada): residential electricity tracking with smart device control (Play Store & App Store)
 - **AtB Jobs App** (v1 & v2) — multi-platform job matching app (Play Store, App Store, Huawei, Amazon)
 - **Lions Footprint** — geo-tracked merchandiser monitoring (ACI Limited)
+
+---
+
+## Open-Source Packages
+
+Published and maintained on pub.dev:
+
+- **[quick_container](https://pub.dev/packages/quick_container)** (v0.0.3) — a production-ready `Container` replacement for Flutter: rectangle/circle/stadium shapes, dashed & dotted borders, per-corner radius, gradients/shadows, tap & long-press with ripple, shimmer loading, and a `.quick()` widget extension. Zero dependencies.
+- **[quick_list_builder](https://pub.dev/packages/quick_list_builder)** (v0.0.2) — a lightweight list widget that replaces `ListView.builder` boilerplate: radio/checkbox/switch selection, async data with pagination & pull-to-refresh, list/grid layouts, skeleton loading, and a `QuickListController` for programmatic control. Zero extra dependencies.
 
 ---
 
